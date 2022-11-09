@@ -60,6 +60,8 @@ class HeartRateMonitor(object):
                             self.bpm = 0
                             if self.print_result:
                                 print("Finger not detected")
+                        if temperature == None:
+                            temperature = 20
                         if self.print_result:
                             print("BPM: {0}, SpO2: {1}, Temp:{2}".format(self.bpm, spo2, temperature))
                     

@@ -41,7 +41,7 @@ def calc_hr_and_spo2(ir_data, red_data):
         for i in range(1, n_peaks):
             peak_interval_sum += (ir_valley_locs[i] - ir_valley_locs[i-1])
         peak_interval_sum = int(peak_interval_sum / (n_peaks - 1))
-        hr = int(SAMPLE_FREQ * 60 / peak_interval_sum)
+        hr = int(SAMPLE_FREQ * 45 / peak_interval_sum)
         hr_valid = True
     else:
         hr = -999  # unable to calculate because # of peaks are too small
